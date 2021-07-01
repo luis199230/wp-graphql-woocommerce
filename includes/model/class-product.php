@@ -115,7 +115,7 @@ class Product extends WC_Post {
 
 		sort( $prices, SORT_NUMERIC );
 
-		if ( $raw ) {
+		if ( $raw && is_array($prices['price'])) {
 			return implode( ', ', $prices['price'] );
 		}
 
